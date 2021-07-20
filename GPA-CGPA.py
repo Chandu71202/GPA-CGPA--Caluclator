@@ -1,11 +1,11 @@
 import sys
 print("\033[1;31;40m "+"NOTE :")
-print("        WE ARE CALUCLATING GPA AND CGPA OUT OF 10")
-print("        CGPA : CUMULATIVE GRADE POINT AVERAGE (caluclated for each semester)")
-print("        GPA  : GRADE POINT AVERAGE (caluclated for all semesters)")
+print("        WE ARE CALUCLATING CGPA AND GPA OUT OF 10")
+print("        CGPA : CUMULATIVE GRADE POINT AVERAGE (caluclated for all semester)")
+print("        GPA  : GRADE POINT AVERAGE (caluclated for individual semester)")
 print("        MARKS SHOULD BE UPLOADED OUT OFF 100 (if you have any subjects marks out of 50 please double the value as 50*2=100 and double the credits too) :)"+"\033[0;37;40m")
 sem=int(input("\033[1;35;40m"+"Enter No.of Semesters: "+"\033[0;37;40m"))
-finalcgpa=[]
+finalgpa=[]
 flag=0
 for a in range(0,sem):
     print("\033[1;36;40m" +"Entering into details of Semester :",(a+1),"\033[0;37;40m")
@@ -44,14 +44,14 @@ for a in range(0,sem):
     print("\033[1;34;40m"+"Your Grade in Respective Subjects are...."+"\033[0;37;40m")       
     for i in range(n):
         print("Grade in ",(i+1),"th Subject is :",Grade[i])
-    cgpa=0
+    gpa=0
     for i in range(n):
         if(marks[i]<50):
             print("\033[1;31;40m" + "Since You have a Marks Less than 50 / Grade='RA' you are not eligible to caluclate the GPA"+"\033[0;37;40m")
             sys.exit()              
     for i in range(n):
-        cgpa=cgpa+(GPA[i]*credit[i])
-    finalcgpa.append(cgpa)
-    print("\033[1;35;40m"+"Your CGPA is :"+"{:.2f}".format(finalcgpa[a]/sum(credit),"\033[0;37;40m"))
+        gpa=gpa+(GPA[i]*credit[i])
+    finalgpa.append(gpa)
+    print("\033[1;35;40m"+"Your GPA is :"+"{:.2f}".format(finalgpa[a]/sum(credit),"\033[0;37;40m"))
     flag=flag+sum(credit)
-print("\033[1;32;40m"+"Your GPA is : "+("{:.2f}".format(sum(finalcgpa)/flag)+"\033[0;37;40m"))
+print("\033[1;32;40m"+"Your CGPA is : "+("{:.2f}".format(sum(finalgpa)/flag)+"\033[0;37;40m"))
