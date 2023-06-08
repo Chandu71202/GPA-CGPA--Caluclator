@@ -3,7 +3,7 @@ print("\033[1;31;40m "+"NOTE :")
 print("        WE ARE CALUCLATING CGPA AND GPA OUT OF 10")
 print("        CGPA : CUMULATIVE GRADE POINT AVERAGE (caluclated for all semester)")
 print("        GPA  : GRADE POINT AVERAGE (caluclated for individual semester)")
-print("        MARKS SHOULD BE UPLOADED OUT OFF 100 (if you have any subjects marks out of 50 please double the value as 50x2=100 and double the credits too) :)"+"\033[0;37;40m")
+print("        MARKS SHOULD BE UPLOADED OUT OFF 100 (if you have any subjects marks out of 50 please double the value as 50x2=100 and leave the credits as usual) :)"+"\033[0;37;40m")
 sem=int(input("\033[1;35;40m"+"Enter No.of Semesters: "+"\033[0;37;40m"))
 finalgpa=[]
 flag=0
